@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react'
 import './App.css'
 
-const WS_URL = 'wss://english-back-5nst.onrender.com/ws'
+const WS_URL = ''
 
 function App() {
   const [isConnected, setIsConnected] = useState(false)
@@ -37,7 +37,7 @@ function App() {
   const connect = async () => {
     try {
       setError(null)
-      console.log('Attempting to connect to:', WS_URL)
+      console.log('Attempting to connect to:', URL)
       addMessage('system', `Connecting to: ${WS_URL}`)
       const ws = new WebSocket(WS_URL)
       
